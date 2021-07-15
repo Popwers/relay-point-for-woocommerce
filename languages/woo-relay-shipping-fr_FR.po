@@ -1,0 +1,28 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Point relais pour Woocommerce\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Language-Team: Lionel Bataille\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0\n"
+"Last-Translator: Lionel Bataille <lionel.bataille@hotmail.com>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: fr\n"
+
+msgid "Relay point for Woocommerce"
+msgstr "Point relais pour Woocommerce"
+
+msgid "Create manually relay point on Woocommerce and show them in a better way selection !"
+msgstr "Créez manuellement des points relais sur Woocommerce et présentez-les de manière plus efficace !"
+
+msgid "Relay point"
+msgstr "Point relais"
+
+msgid "Allow customers to choose from a list of relay points where they can collect their orders."
+msgstr "Permettre aux clients de choisir parmi une liste de points relais, où ils pourront retirer leurs commandes."
+
+msgid "Enter a cost (excluding tax) or formula, e.g. 10.00 * [qty].<br><br>Use [qty] for the number of items, [cost] for the total cost of the items, and [fee percent=\"10\" min_fee=\"20\" max_fee=\"\"] for the fee on a percentage basis."
+msgstr "Saisissez un coût (hors taxes) ou une formule, par exemple 10,00 * [qty].<br><br>Utilisez [qty] pour le nombre d'articles, [cost] pour le coût total des articles et [fee percent=\"10\" min_fee=\"20\" max_fee=\"\"] pour les frais en pourcentage."
