@@ -2,7 +2,7 @@
 /*
 * Plugin Name: Relay point for Woocommerce
 * Description: Create manually relay point on Woocommerce and show them in a better way selection !
-* Version: 1.0.0
+* Version: 2.0.0
 * Tags: woocommerce, shipping
 * Author: Lionel Bataille
 * Author URI: mailto:lionel.bataille@hotmail.com
