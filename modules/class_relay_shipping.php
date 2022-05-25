@@ -7,8 +7,8 @@ function wc_point_relais_init()
         {
             $this->id = 'wc_point_relais';
             $this->instance_id = absint($instance_id);
-            $this->method_title = __('Relay point', 'woo-relay-shipping');
-            $this->method_description = __('Allow customers to choose from a list of relay points where they can collect their orders.', 'woo-relay-shipping');
+            $this->method_title = __('Relay point', 'relay-point-for-woocommerce');
+            $this->method_description = __('Allow customers to choose from a list of relay points where they can collect their orders.', 'relay-point-for-woocommerce');
             $this->enabled = 'yes';
             $this->supports = array('shipping-zones', 'instance-settings-modal', 'instance-settings');
 
@@ -17,20 +17,20 @@ function wc_point_relais_init()
                     'title' => __('Title', 'woocommerce'),
                     'type' => 'text',
                     'description' => __('This controls the title which the user sees during checkout.', 'woocommerce'),
-                    'default' => __('Relay point', 'woo-relay-shipping'),
+                    'default' => __('Relay point', 'relay-point-for-woocommerce'),
                     'desc_tip'        => true
                 ),
                 'rate' => array(
                     'title' => __('Cost', 'woocommerce'),
                     'type'    => 'number',
-                    'description' => __('Enter a cost (excluding tax) or formula, e.g. 10.00 * [qty].<br><br>Use [qty] for the number of items, [cost] for the total cost of the items, and [fee percent="10" min_fee="20" max_fee=""] for the fee on a percentage basis.', 'woo-relay-shipping'),
+                    'description' => __('Enter a cost (excluding tax) or formula, e.g. 10.00 * [qty].<br><br>Use [qty] for the number of items, [cost] for the total cost of the items, and [fee percent="10" min_fee="20" max_fee=""] for the fee on a percentage basis.', 'relay-point-for-woocommerce'),
                     'default' => 0,
                     'desc_tip' => true
                 ),
                 'free_amount' => array(
-                    'title' => __('Free delivery', 'woo-relay-shipping'),
+                    'title' => __('Free delivery', 'relay-point-for-woocommerce'),
                     'type'    => 'number',
-                    'description' => __('Amount from which shipping becomes free', 'woo-relay-shipping'),
+                    'description' => __('Amount from which shipping becomes free', 'relay-point-for-woocommerce'),
                     'default' => null,
                     'desc_tip' => true
                 ),
@@ -38,7 +38,7 @@ function wc_point_relais_init()
 
             $this->init();
 
-            $this->title = null !== $this->get_option('title') ? $this->get_option('title') : __('Relay point', 'woo-relay-shipping');
+            $this->title = null !== $this->get_option('title') ? $this->get_option('title') : __('Relay point', 'relay-point-for-woocommerce');
         }
 
         public function init()

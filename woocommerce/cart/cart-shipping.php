@@ -58,7 +58,7 @@ $calculator_text          = '';
 						$CurrentChecked = in_array($chosen_method, $WCRelay) ? $chosen_method : $WCRelay[0];
 						echo '<div class="relay_wrapper">';
 						printf('<input type="radio" name="shipping_method[%1$d]" data-index="%1$d" id="shipping_method_%1$d_%2$s" style="margin: 3px .4375em 0 0;" value="%3$s" class="shipping_method" %4$s />', $index, esc_attr(sanitize_title($CurrentChecked)), esc_attr($CurrentChecked), checked($CurrentChecked, $chosen_method, false));
-						printf('<label for="shipping_method_%1$s_%2$s">%3$s</label>', $index, esc_attr(sanitize_title($CurrentChecked)), __('Relay point', 'woo-relay-shipping'));
+						printf('<label for="shipping_method_%1$s_%2$s">%3$s</label>', $index, esc_attr(sanitize_title($CurrentChecked)), __('Relay point', 'relay-point-for-woocommerce'));
 						do_action('woocommerce_after_shipping_rate', $method, $index);
 
 						printf('<select class="%1$s" style="display: block; margin-left: 25px; margin-top: 10px;">', checked($CurrentChecked, $chosen_method, false) ? '' : "disabled");

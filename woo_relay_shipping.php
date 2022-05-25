@@ -8,7 +8,7 @@
 * Author URI: mailto:lionel.bataille@hotmail.com
 * Licence: GPL2
 * Licence URI: https://www.gnu.org/licenses/gpl-2.0.html
-* Text Domain: woo-relay-shipping
+* Text Domain: relay-point-for-woocommerce
 * Domain Path: /languages
 */
 
@@ -57,7 +57,7 @@ class woo_relay_shipping
 
 	public function load_plugin_text_domain()
 	{
-		load_plugin_textdomain('woo-relay-shipping', FALSE, dirname(plugin_basename(__FILE__)) . '/languages/');
+		load_plugin_textdomain('relay-point-for-woocommerce', FALSE, dirname(plugin_basename(__FILE__)) . '/languages/');
 	}
 }
 
