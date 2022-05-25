@@ -27,6 +27,13 @@ function wc_point_relais_init()
                     'default' => 0,
                     'desc_tip' => true
                 ),
+                'free_amount' => array(
+                    'title' => __('Free delivery', 'woo-relay-shipping'),
+                    'type'    => 'number',
+                    'description' => __('Amount from which shipping becomes free', 'woo-relay-shipping'),
+                    'default' => null,
+                    'desc_tip' => true
+                ),
             );
 
             $this->init();
@@ -46,10 +53,15 @@ function wc_point_relais_init()
 
         public function calculate_shipping($package = array())
         {
+
+            $cost = '' !== $this->get_option('rate') ? $this->get_option('rate') : 0;
+            $free = '' !== $this->get_option('free_amount') ? $this->get_option('free_amount') : null;
+            $isFree = $free !== null ? WC()->cart->get_subtotal() >= $free : false;
+
             $this->add_rate(array(
                 'id'    => $this->id . $this->instance_id,
                 'label' => $this->title,
-                'cost'  => null !== $this->get_option('rate') ? $this->get_option('rate') : 0,
+                'cost'  => $isFree ? 0 : $cost,
             ));
         }
     }

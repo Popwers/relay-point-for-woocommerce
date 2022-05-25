@@ -2,7 +2,7 @@
 Donate link: https://www.paypal.com/donate?hosted_button_id=RQKEBFBCWXSB2
 Tags: woocommerce, shipping
 Requires at least: 4.7
-Tested up to: 5.7.2
+Tested up to: 6.0
 Stable tag: 1.0
 Requires PHP: 7.0
 License: GPLv2 or later

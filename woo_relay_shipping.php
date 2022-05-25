@@ -12,7 +12,7 @@
 * Domain Path: /languages
 */
 
-if (!defined('ABSPATH')) {
+if (!defined('ABSPATH') && !defined('WPINC')) {
 	exit; // Exit if accessed directly.
 }
 
