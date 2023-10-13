@@ -14,7 +14,7 @@ Relay Point for WooCommerce allows users to create additional shipping methods f
 
 = Note for Developers =
 
-Contributions to the enhancement of this plugin are welcome. Visit the [GitHub repository](https://github.com/Popwers/woocommerce-relay-shipping) to contribute and provide feedback.
+Contributions to the enhancement of this plugin are welcome. Visit the [GitHub repository](https://github.com/Popwers/relay-point-for-woocommerce) to contribute and provide feedback.
 
 == Frequently Asked Questions ==
 

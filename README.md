@@ -4,7 +4,7 @@
 Relay Point for WooCommerce is a plugin that adds additional shipping methods for creating manual relay points. However, it goes beyond just creating new shipping methods. This plugin simplifies the process by displaying a list of selections instead of individually listing each relay point.
 
 ## Installation on WordPress
-1. Download the latest release from the [Releases](https://github.com/Popwers/woocommerce-relay-shipping/releases) section.
+1. Download the latest release from the [Releases](https://github.com/Popwers/relay-point-for-woocommerce/releases) section.
 2. Upload the plugin files to the `/wp-content/plugins/relay-point-for-woocommerce` directory, or install the plugin directly through the WordPress plugins screen.
 3. Activate the plugin through the 'Plugins' screen in WordPress.
 
@@ -27,7 +27,7 @@ We welcome contributions to improve this plugin. To contribute, please follow th
 5. Submit a pull request.
 
 ## Bugs and Issues
-If you encounter any bugs or have suggestions, please [open an issue](https://github.com/Popwers/woocommerce-relay-shipping/issues).
+If you encounter any bugs or have suggestions, please [open an issue](https://github.com/Popwers/relay-point-for-woocommerce/issues).
 
 ## License
 This project is licensed under the [GPL-2.0 License](https://www.gnu.org/licenses/gpl-2.0.html). See the [LICENSE](LICENSE) file for more details.
