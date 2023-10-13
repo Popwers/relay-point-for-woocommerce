@@ -1,16 +1,16 @@
 <?php
 /*
-* Plugin Name: Relay point for Woocommerce
-* Description: Create manually relay point on Woocommerce and show them in a better way selection !
-* Version: 2.0.0
-* Tags: woocommerce, shipping
-* Author: Lionel Bataille
-* Author URI: mailto:lionel.bataille@hotmail.com
-* Licence: GPL2
-* Licence URI: https://www.gnu.org/licenses/gpl-2.0.html
-* Text Domain: relay-point-for-woocommerce
-* Domain Path: /languages
-*/
+ * Plugin Name: Relay point for Woocommerce
+ * Description: Create manually relay point on Woocommerce and show them in a better way selection !
+ * Version: 2.0.0
+ * Tags: woocommerce, shipping
+ * Author: Lionel Bataille
+ * Author URI: mailto:lionel.bataille@hotmail.com
+ * Licence: GPL2
+ * Licence URI: https://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain: relay-point-for-woocommerce
+ * Domain Path: /languages
+ */
 
 if (!defined('ABSPATH') && !defined('WPINC')) {
 	exit; // Exit if accessed directly.
@@ -21,9 +21,8 @@ class woo_relay_shipping
 	public function __construct()
 	{
 		// Check if the class doesnt exist yet
-		if (!class_exists('WC_Point_relais')) {
+		if (!class_exists('WC_Point_relais'))
 			include_once plugin_dir_path(__FILE__) . 'modules/class_relay_shipping.php';
-		}
 
 		// Add template override capabilities for the plugin
 		add_filter('woocommerce_locate_template', 'plugin_override_woocommerce_locate_template', 10, 3);
@@ -32,8 +31,9 @@ class woo_relay_shipping
 		{
 			global $woocommerce;
 			$_template = $template;
-			if (!$template_path) $template_path = $woocommerce->template_url;
-			$plugin_path  = untrailingslashit(plugin_dir_path(__FILE__)) . '/woocommerce/';
+			if (!$template_path)
+				$template_path = $woocommerce->template_url;
+			$plugin_path = untrailingslashit(plugin_dir_path(__FILE__)) . '/woocommerce/';
 
 			$template = locate_template(
 				array(

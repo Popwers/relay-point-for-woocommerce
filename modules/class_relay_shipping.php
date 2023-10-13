@@ -1,6 +1,8 @@
 <?php
 function wc_point_relais_init()
 {
+    if (class_exists('WC_Point_relais'))
+        return;
     class WC_Point_relais extends WC_Shipping_Method
     {
         public function __construct($instance_id = 0)
@@ -18,18 +20,18 @@ function wc_point_relais_init()
                     'type' => 'text',
                     'description' => __('This controls the title which the user sees during checkout.', 'woocommerce'),
                     'default' => __('Relay point', 'relay-point-for-woocommerce'),
-                    'desc_tip'        => true
+                    'desc_tip' => true
                 ),
                 'rate' => array(
                     'title' => __('Cost', 'woocommerce'),
-                    'type'    => 'number',
+                    'type' => 'number',
                     'description' => __('Enter a cost (excluding tax) or formula, e.g. 10.00 * [qty].<br><br>Use [qty] for the number of items, [cost] for the total cost of the items, and [fee percent="10" min_fee="20" max_fee=""] for the fee on a percentage basis.', 'relay-point-for-woocommerce'),
                     'default' => 0,
                     'desc_tip' => true
                 ),
                 'free_amount' => array(
                     'title' => __('Free delivery', 'relay-point-for-woocommerce'),
-                    'type'    => 'number',
+                    'type' => 'number',
                     'description' => __('Amount from which shipping becomes free', 'relay-point-for-woocommerce'),
                     'default' => null,
                     'desc_tip' => true
@@ -58,11 +60,13 @@ function wc_point_relais_init()
             $free = '' !== $this->get_option('free_amount') ? $this->get_option('free_amount') : null;
             $isFree = $free !== null ? WC()->cart->get_subtotal() >= $free : false;
 
-            $this->add_rate(array(
-                'id'    => $this->id . $this->instance_id,
-                'label' => $this->title,
-                'cost'  => $isFree ? 0 : $cost,
-            ));
+            $this->add_rate(
+                array(
+                    'id' => $this->id . $this->instance_id,
+                    'label' => $this->title,
+                    'cost' => $isFree ? 0 : $cost,
+                )
+            );
         }
     }
 }
