@@ -1,13 +1,13 @@
 <?php
 /*
- * Plugin Name: Relay point for Woocommerce
- * Description: Create manually relay point on Woocommerce and show them in a better way selection !
- * Version: 2.0.0
- * Tags: woocommerce, shipping
+ * Plugin Name: Relay Point for WooCommerce
+ * Description: Manually create relay points on WooCommerce and display them in an improved selection format.
+ * Version: 2.0.2
+ * Tags: WooCommerce, Shipping
  * Author: Lionel Bataille
  * Author URI: mailto:lionel.bataille@hotmail.com
- * Licence: GPL2
- * Licence URI: https://www.gnu.org/licenses/gpl-2.0.html
+ * License: GPL2
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: relay-point-for-woocommerce
  * Domain Path: /languages
  */
@@ -16,11 +16,11 @@ if (!defined('ABSPATH') && !defined('WPINC')) {
 	exit; // Exit if accessed directly.
 }
 
-class woo_relay_shipping
+class Woo_Relay_Shipping
 {
 	public function __construct()
 	{
-		// Check if the class doesnt exist yet
+		// Check if the class doesn't exist yet
 		if (!class_exists('WC_Point_relais'))
 			include_once plugin_dir_path(__FILE__) . 'modules/class_relay_shipping.php';
 
@@ -57,11 +57,11 @@ class woo_relay_shipping
 
 	public function load_plugin_text_domain()
 	{
-		load_plugin_textdomain('relay-point-for-woocommerce', FALSE, dirname(plugin_basename(__FILE__)) . '/languages/');
+		load_plugin_textdomain('relay-point-for-woocommerce', false, dirname(plugin_basename(__FILE__)) . '/languages/');
 	}
 }
 
-// Check Woocommerce before running the plugin
+// Check WooCommerce before running the plugin
 if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_option('active_plugins')))) {
-	new woo_relay_shipping();
+	new Woo_Relay_Shipping();
 }

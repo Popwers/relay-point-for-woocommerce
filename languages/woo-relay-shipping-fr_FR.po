@@ -10,25 +10,25 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.4\n"
 
-msgid "Relay point for Woocommerce"
-msgstr "Point relais pour Woocommerce"
+msgid "Relay point for WooCommerce"
+msgstr "Point relais pour WooCommerce"
 
-msgid "Create manually relay point on Woocommerce and show them in a better way selection !"
-msgstr "Créez manuellement des points relais sur Woocommerce et présentez-les de manière plus efficace !"
+msgid "Create manually relay points on WooCommerce and display them more efficiently!"
+msgstr "Créez manuellement des points relais sur WooCommerce et affichez-les de manière plus efficace !"
 
 msgid "Relay point"
 msgstr "Point relais"
 
-msgid "Allow customers to choose from a list of relay points where they can collect their orders."
-msgstr "Permettre aux clients de choisir parmi une liste de points relais, où ils pourront retirer leurs commandes."
+msgid "Allow customers to choose from a list of relay points where they can pick up their orders."
+msgstr "Permettez aux clients de choisir parmi une liste de points relais où ils peuvent récupérer leurs commandes."
 
-msgid "Enter a cost (excluding tax) or formula, e.g. 10.00 * [qty].<br><br>Use [qty] for the number of items, [cost] for the total cost of the items, and [fee percent=\"10\" min_fee=\"20\" max_fee=\"\"] for the fee on a percentage basis."
-msgstr "Saisissez un coût (hors taxes) ou une formule, par exemple 10,00 * [qty].<br><br>Utilisez [qty] pour le nombre d'articles, [cost] pour le coût total des articles et [fee percent=\"10\" min_fee=\"20\" max_fee=\"\"] pour les frais en pourcentage."
+msgid "Enter a cost (excluding tax) or formula, e.g., 10.00 * [qty].<br><br>Use [qty] for the number of items, [cost] for the total cost of the items, and [fee percent=\"10\" min_fee=\"20\" max_fee=\"\"] for a percentage-based fee."
+msgstr "Entrez un coût (hors taxes) ou une formule, par exemple 10,00 * [qty].<br><br>Utilisez [qty] pour le nombre d'articles, [cost] pour le coût total des articles et [fee percent=\"10\" min_fee=\"20\" max_fee=\"\"] pour des frais basés sur un pourcentage."
 
 msgid "Free delivery"
 msgstr "Livraison gratuite"
 
-msgid "Amount from which shipping becomes free"
-msgstr "Montant à partir duquel la livraison devient gratuite"
+msgid "Amount from which shipping becomes free for this relay point"
+msgstr "Montant à partir duquel la livraison devient gratuite pour ce point relais"
