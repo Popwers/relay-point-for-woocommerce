@@ -1,0 +1,11 @@
+/.wordpress-org
+/.git
+/.github
+
+.distignore
+.gitignore
+
+docker-compose.yml
+Dockerfile
+LICENSE
+README.md
