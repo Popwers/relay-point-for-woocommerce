@@ -1,0 +1,23 @@
+on:
+  schedule:
+    - cron: '0 0 24 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update-tested-up-to:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Update "Tested up to" version
+        uses: AlecRust/wp-tut-updater-action@v1
+        with:
+          file-paths: src/readme.txt
+          create-pr: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
