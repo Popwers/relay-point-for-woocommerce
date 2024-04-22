@@ -26,6 +26,7 @@ jobs:
 
   publish-change:
     name: Publish change
+    needs: update-tested-up-to
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
