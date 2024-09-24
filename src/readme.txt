@@ -7,6 +7,7 @@ Requires PHP: 7.0
 License: GPLv2 or later
 License URI: [https://www.gnu.org/licenses/gpl-2.0.html](https://www.gnu.org/licenses/gpl-2.0.html)
 Contributors: popwers
+Relay Point for WooCommerce enables users to add custom shipping methods for selecting relay points manually. It streamlines the process by offering a user-friendly pick list of relay points, avoiding the need to list each one separately.
 
 == Description ==
 
