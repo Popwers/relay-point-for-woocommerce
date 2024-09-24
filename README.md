@@ -14,7 +14,7 @@ To set up the development environment with Docker, follow these steps:
 1. Install Docker and Docker Compose.
 2. Clone the repository.
 3. Navigate to the project root.
-4. Run `docker-compose up` to start the development environment.
+4. Run `docker compose up` to start the development environment.
 5. You will get a ready to use WordPress installation on `http://localhost:8000` with the plugin installed.
 
 ## Contributing
