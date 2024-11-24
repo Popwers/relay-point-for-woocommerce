@@ -1,7 +1,7 @@
 === Relay Point for WooCommerce ===
 Tags: WooCommerce, Shipping
 Requires at least: 4.7
-Tested up to: 6.6
+Tested up to: 6.7
 Stable tag: 2.0.2
 Requires PHP: 7.0
 License: GPLv2 or later
