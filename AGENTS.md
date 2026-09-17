@@ -10,14 +10,14 @@ WordPress plugin that adds manual WooCommerce relay-point shipping methods and s
 - `package.json` exists only for semantic-release. It is not an app manifest.
 - `docker-compose.yml` mounts `./src` at `/var/www/html/wp-content/plugins/woocommerce-relay-shipping`.
 
-## Run
+## Commands
 
 ```bash
 docker compose up
 ```
 
-WordPress is at `http://localhost:8000`. WooCommerce is not preinstalled. Activate WooCommerce, then activate the plugin.
+WordPress is at `http://localhost:8000`. WooCommerce is not preinstalled. Activate WooCommerce. Then activate the plugin.
 
-## Constraints
+## Invariants
 
-Edit PHP under `src/` only. Do not add a JavaScript app toolchain or Vite+.
+Edit PHP under `src/`.
