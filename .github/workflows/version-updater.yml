@@ -12,6 +12,8 @@ jobs:
   update-tested-up-to:
     name: Update "Tested up to" version
     runs-on: ubuntu-latest
+    # Without a timeout a hung job runs for 6 hours.
+    timeout-minutes: 10
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
