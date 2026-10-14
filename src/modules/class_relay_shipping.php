@@ -45,11 +45,9 @@ function wc_point_relais_init()
 
         public function init()
         {
-            // Load the settings API
             $this->init_form_fields();
             $this->init_settings();
 
-            // Save settings in admin if you have any defined
             add_action('woocommerce_update_options_shipping_' . $this->id, array($this, 'process_admin_options'));
         }
 
