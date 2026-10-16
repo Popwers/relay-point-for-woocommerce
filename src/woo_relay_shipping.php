@@ -13,18 +13,16 @@
  */
 
 if (!defined('ABSPATH') && !defined('WPINC')) {
-	exit; // Exit if accessed directly.
+	exit;
 }
 
 class Woo_Relay_Shipping
 {
 	public function __construct()
 	{
-		// Check if the class doesn't exist yet
 		if (!class_exists('WC_Point_relais'))
 			include_once plugin_dir_path(__FILE__) . 'modules/class_relay_shipping.php';
 
-		// Add template override capabilities for the plugin
 		add_filter('woocommerce_locate_template', 'plugin_override_woocommerce_locate_template', 10, 3);
 
 		function plugin_override_woocommerce_locate_template($template, $template_name, $template_path)
@@ -51,7 +49,6 @@ class Woo_Relay_Shipping
 			return $template;
 		}
 
-		// Add translation for the plugin
 		add_action('plugins_loaded', [$this, 'load_plugin_text_domain']);
 	}
 
@@ -61,7 +58,6 @@ class Woo_Relay_Shipping
 	}
 }
 
-// Check WooCommerce before running the plugin
 if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_option('active_plugins')))) {
 	new Woo_Relay_Shipping();
 }
