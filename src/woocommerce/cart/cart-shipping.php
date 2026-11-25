@@ -87,10 +87,12 @@ $calculator_text          = '';
 						</script>
 
 				<?php
-						function action_woocommerce_checkout_update_order_review($array, $int)
-						{
-							WC()->cart->calculate_shipping();
-							return;
+						if (!function_exists('action_woocommerce_checkout_update_order_review')) {
+							function action_woocommerce_checkout_update_order_review($array, $int)
+							{
+								WC()->cart->calculate_shipping();
+								return;
+							}
 						}
 						add_action('woocommerce_checkout_update_order_review', 'action_woocommerce_checkout_update_order_review', 10, 2);
 					}
