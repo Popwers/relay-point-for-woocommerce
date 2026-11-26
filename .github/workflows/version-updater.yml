@@ -16,10 +16,10 @@ jobs:
     timeout-minutes: 10
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
 
       - name: Update "Tested up to" version
-        uses: AlecRust/wp-tut-updater-action@v1
+        uses: AlecRust/wp-tut-updater-action@d55b7269a51fc0d7ebdc786e670f8dee7583b3e9 # v1
         with:
           file-paths: src/readme.txt
           create-pr: false
