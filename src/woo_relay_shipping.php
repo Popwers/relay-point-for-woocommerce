@@ -58,6 +58,21 @@ class Woo_Relay_Shipping
 	}
 }
 
-if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_option('active_plugins')))) {
+/**
+ * Tell whether WooCommerce is active on this site or network-activated on a multisite
+ * @return bool
+ */
+function woo_relay_shipping_is_woocommerce_active()
+{
+	$plugin = 'woocommerce/woocommerce.php';
+
+	if (in_array($plugin, apply_filters('active_plugins', get_option('active_plugins')), true)) {
+		return true;
+	}
+
+	return is_multisite() && isset(get_site_option('active_sitewide_plugins', array())[$plugin]);
+}
+
+if (woo_relay_shipping_is_woocommerce_active()) {
 	new Woo_Relay_Shipping();
 }
