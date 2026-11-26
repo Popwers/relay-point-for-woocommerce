@@ -67,18 +67,6 @@ $calculator_text          = '';
 								display: none !important;
 							}
 						</style>
-						<script type="text/javascript">
-							jQuery('.relay_wrapper input')[0].checked == false ? jQuery('.relay_wrapper select').attr('disabled', true) : jQuery('.relay_wrapper select').removeAttr('disabled');
-							jQuery('.relay_wrapper select').on('change', function() {
-								let name = this.selectedOptions[0].attributes.name.value;
-								let data = this.selectedOptions[0].attributes['data-index'].value;
-								let id = this.selectedOptions[0].attributes.id.value;
-								let value = this.selectedOptions[0].attributes.value.value;
-
-								jQuery('.relay_wrapper input').attr('name', name).attr('value', value).attr('data-index', data).attr('id', id);
-								jQuery('body').trigger('update_checkout');
-							});
-						</script>
 
 				<?php
 						if (!function_exists('action_woocommerce_checkout_update_order_review')) {

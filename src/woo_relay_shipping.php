@@ -50,6 +50,18 @@ class Woo_Relay_Shipping
 		}
 
 		add_action('plugins_loaded', [$this, 'load_plugin_text_domain']);
+		add_action('wp_enqueue_scripts', [$this, 'enqueue_assets']);
+	}
+
+	public function enqueue_assets()
+	{
+		if (!function_exists('is_cart') || !(is_cart() || is_checkout())) {
+			return;
+		}
+
+		$path = plugin_dir_path(__FILE__) . 'assets/relay-select.js';
+
+		wp_enqueue_script('relay-point-select', plugins_url('assets/relay-select.js', __FILE__), array('jquery'), filemtime($path), true);
 	}
 
 	public function load_plugin_text_domain()
