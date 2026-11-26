@@ -50,6 +50,18 @@ class Woo_Relay_Shipping
 		}
 
 		add_action('plugins_loaded', [$this, 'load_plugin_text_domain']);
+		add_action('wp_enqueue_scripts', [$this, 'enqueue_assets']);
+	}
+
+	public function enqueue_assets()
+	{
+		if (!function_exists('is_cart') || !(is_cart() || is_checkout())) {
+			return;
+		}
+
+		$path = plugin_dir_path(__FILE__) . 'assets/relay-select.js';
+
+		wp_enqueue_script('relay-point-select', plugins_url('assets/relay-select.js', __FILE__), array('jquery'), filemtime($path), true);
 	}
 
 	public function load_plugin_text_domain()
@@ -58,6 +70,21 @@ class Woo_Relay_Shipping
 	}
 }
 
-if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_option('active_plugins')))) {
+/**
+ * Tell whether WooCommerce is active on this site or network-activated on a multisite
+ * @return bool
+ */
+function woo_relay_shipping_is_woocommerce_active()
+{
+	$plugin = 'woocommerce/woocommerce.php';
+
+	if (in_array($plugin, apply_filters('active_plugins', get_option('active_plugins')), true)) {
+		return true;
+	}
+
+	return is_multisite() && isset(get_site_option('active_sitewide_plugins', array())[$plugin]);
+}
+
+if (woo_relay_shipping_is_woocommerce_active()) {
 	new Woo_Relay_Shipping();
 }

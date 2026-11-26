@@ -1,4 +1,7 @@
 <?php
+
+defined('ABSPATH') || exit;
+
 function wc_point_relais_init()
 {
     if (class_exists('WC_Point_relais'))
